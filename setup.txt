@@ -1,0 +1,1 @@
+figure out how to add files from differant locations into single git folder
