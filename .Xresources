@@ -1,0 +1,65 @@
+! its drip or drown spiderman
+
+
+! **********  Colours  **********
+
+#include "/home/nath/.xcolours/blaquemagick"
+
+! **********  Program Settings *********
+
+! Colors
+*foreground: FOREGROUND
+*background: BACKGROUND
+*color0: COLOR0
+*color1: COLOR1
+*color2: COLOR2
+*color3: COLOR3
+*color4: COLOR4
+*color5: COLOR5
+*color6: COLOR6
+*color7: COLOR7
+*color8: COLOR8
+*color9: COLOR9
+*color10: COLOR10
+*color11: COLOR11
+*color12: COLOR12
+*color13: COLOR13
+*color14: COLOR14
+*color15: COLOR15
+
+! Font
+*font: xft:Tamsyn:style=Regular:pixelsize=16
+
+! Terminal
+
+URxvt*cursorColor: COLOR7
+URxvt*highlightColor: COLOR13
+URxvt*borderColor: COLOR0
+
+! Cursor
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+
+! Pointer
+URxvt*pointerBlank: true
+
+
+! Border
+URxvt*internalBorder: 8
+
+! Misc.
+URxvt*url-launcher: firefox
+URxvt*pastableTabs: true
+URxvt*scrollBar: False
+URxvt*title: Terminal
+URxvt*modifier: 4
+
+! i3
+! 	copy and paste
+	URxvt.iso14755: false
+	URxvt.iso14755_52: false
+	URxvt.keysym.C-M-c: builtin-string:
+	URxvt.keysym.C-M-v: builtin-string:
+
+	URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+	URxvt.keysym.C-S-0x56: eval:paste_clipboard

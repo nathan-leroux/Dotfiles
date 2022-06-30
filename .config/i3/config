@@ -1,0 +1,207 @@
+# i3 config file (v4)
+
+#################################################
+#		My Edits
+#################################################
+
+# Script Variables
+set $lights ~/Scripts/lights.sh
+set $volume /usr/bin/pulseaudio-ctl
+set $media /usr/bin/playerctl 
+
+# Colour Variables
+set_from_resource $fg foreground
+set_from_resource $bg background
+set_from_resource $c0 color0
+set_from_resource $c1 color1
+set_from_resource $c2 color2
+set_from_resource $c3 color3
+set_from_resource $c4 color4
+set_from_resource $c5 color5
+set_from_resource $c6 color6
+set_from_resource $c7 color7
+set_from_resource $c8 color8
+set_from_resource $c9 color9
+set_from_resource $c10 color10
+set_from_resource $c11 color11
+set_from_resource $c12 color12
+set_from_resource $c13 color13
+set_from_resource $c14 color14
+set_from_resource $c15 color15
+
+# Keyboard Variables
+set $mod Mod4
+
+set $up k
+set $down j
+set $left h
+set $right l
+
+# Wallpaper
+exec_always feh --bg-fill ~/Pictures/wallpaper.png
+
+# Default font
+font pango:DejaVu Sans Mono 8
+
+# Gap sizes
+gaps inner 10
+gaps outer 10
+
+# Program bindings
+bindsym $mod+Return exec urxvt
+bindsym $mod+bracketright exec firefox
+bindsym $mod+bracketleft exec subl
+bindsym $mod+Shift+s exec gnome-control-center
+
+# i3 styling
+#	borders
+	default_border pixel 3
+
+#	colours
+	client.focused 		$fg $c1 $fg $c3
+	client.focused_inactive	$fg $c3 $fg $c3 
+	client.unfocused	$fg $c3 $fg $c3
+
+
+# utilities
+#	adjusting brightness
+	bindsym	F2 exec $lights screen up 10
+	bindsym F1 exec $lights screen down 10
+
+	bindsym XF86MonBrightnessUp exec $lights screen up 10
+	bindsym XF86MonBrightnessDown exec $lights screen down 10
+
+#	adjusting keyboard lights
+	bindsym F6 exec $lights keys up 100
+	bindsym F5 exec $lights keys down 100
+
+	bindsym XF86KbdBrightnessUp exec $lights keys up 100
+	bindsym XF86KbdBrightnessDown exec $lights keys down 100
+
+#	screenshots
+	bindsym F3 exec maim ~/Pictures/Screenshot_`date +%Y-%m-%d_%H:%M:%S`.png
+	bindsym F4 exec maim  -s ~/Pictures/Screenshot_`date +%Y-%m-%d_%H:%M:%S`.png
+
+#	volume
+	bindsym F12 exec $volume up
+	bindsym F11 exec $volume down
+	bindsym F10 exec $volume mute
+
+	bindsym XF86AudioRaiseVolume exec $volume up
+	bindsym XF86AudioLowerVolume exec $volume down
+	bindsym XF86AudioMute exec $volume mute
+
+#	media player
+	bindsym F9 exec $media next
+	bindsym F7 exec $media previous
+	bindsym F8 exec $media play-pause
+
+	bindsym XF86AudioNext exec $media next
+	bindsym XF86AudioPrev exec $media previous
+	bindsym XF86AudioPlay exec $media play-pause
+
+# i3 commands
+# 	close window
+	bindsym $mod+q kill
+
+#	open dmenu
+	bindsym $mod+d exec dmenu_run
+
+#	reload config
+	bindsym $mod+Shift+c reload
+
+#	restart i3
+	bindsym $mod+Shift+r restart
+
+#	shutdown
+	bindsym $mod+Escape exec "shutdown now"
+
+#	change focus
+	bindsym $mod+$left focus left
+	bindsym $mod+$down focus down
+	bindsym $mod+$up focus up
+	bindsym $mod+$right focus right
+	bindsym $mod+a focus parent
+
+#	shift window
+	bindsym $mod+Shift+$left move left
+	bindsym $mod+Shift+$down move down
+	bindsym $mod+Shift+$up move up
+	bindsym $mod+Shift+$right move right
+
+#	floating windows
+	floating_modifier $mod
+	bindsym $mod+Shift+space floating toggle
+	bindsym $mod+space focus mode_toggle
+
+#	split direction
+	bindsym $mod+b split h
+	bindsym $mod+v split v
+
+#	fullscreen
+	bindsym $mod+f fullscreen toggle
+
+#	workspaces
+	bindsym $mod+Shift+bracketright workspace next
+	bindsym $mod+Shift+bracketleft workspace prev
+
+	bindsym $mod+1 workspace 1
+	bindsym $mod+2 workspace 2
+	bindsym $mod+3 workspace 3
+	bindsym $mod+4 workspace 4
+	bindsym $mod+5 workspace 5
+	bindsym $mod+6 workspace 6
+	bindsym $mod+7 workspace 7
+	bindsym $mod+8 workspace 8
+	bindsym $mod+9 workspace 9
+	bindsym $mod+0 workspace 10
+
+	bindsym $mod+Shift+1 move container to workspace 1
+	bindsym $mod+Shift+2 move container to workspace 2
+	bindsym $mod+Shift+3 move container to workspace 3
+	bindsym $mod+Shift+4 move container to workspace 4
+	bindsym $mod+Shift+5 move container to workspace 5
+	bindsym $mod+Shift+6 move container to workspace 6
+	bindsym $mod+Shift+7 move container to workspace 7
+	bindsym $mod+Shift+8 move container to workspace 8
+	bindsym $mod+Shift+9 move container to workspace 9
+	bindsym $mod+Shift+0 move container to workspace 10
+
+# Compositor, Notifications and Bar
+#exec_always --no-startup-id pkill picom; picom --no-use-damage
+#exec_always --no-startup-id pkill dunst; dunst
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+#################################################
+#		Default Config
+#################################################
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
