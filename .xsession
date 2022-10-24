@@ -10,13 +10,9 @@ echo local xsession launched at `date +%Y-%m-%d_%H:%M:%S` > $log
 echo validating i3 config... >> $log
 i3 -C >> $log 
 
-# start picom
-echo picom launched... >> $log
-$HOME/.config/picom/launch.sh >> $log &
-
 # start polybar
-echo polybar launched... >> $log
-$HOME/.config/polybar/launch.sh 2>> $log &
+#echo polybar launched... >> $log
+#$HOME/.config/polybar/launch.sh 2>> $log &
 
 # load wallpaper
 echo loading wallpaper... >> $log

@@ -168,9 +168,14 @@ bindsym $mod+Shift+s exec gnome-control-center
 	bindsym $mod+Shift+0 move container to workspace 10
 
 # Compositor, Notifications and Bar
+set $log $HOME/.config/startup.log
+
 #exec_always --no-startup-id pkill picom; picom --no-use-damage
 #exec_always --no-startup-id pkill dunst; dunst
-#exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# Launch Polybar
+exec_always echo "polybar launched..." > $log
+exec_always --no-startup-id ~/.config/polybar/launch.sh 2>> $log 
 
 #################################################
 #		Default Config
