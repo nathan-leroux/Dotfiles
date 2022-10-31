@@ -18,6 +18,5 @@ i3 -C >> $log
 echo loading wallpaper... >> $log
 feh --bg-fill $HOME/Pictures/wallpaper.png 2>> $log
 
-
 # start i3
 exec i3 2>> $log 

@@ -172,6 +172,9 @@ set $log $HOME/.config/startup.log
 
 #exec_always --no-startup-id pkill picom; picom --no-use-damage
 #exec_always --no-startup-id pkill dunst; dunst
+#
+# Update Colour Scheme
+exec_always ~/Scripts/subl-colour.py
 
 # Launch Polybar
 exec_always echo "polybar launched..." > $log
