@@ -1,0 +1,29 @@
+! *****  Outrun  *****
+
+! Special
+#define FOREGROUND #2de2e6
+#define BACKGROUND #241734
+
+! Primary
+#define COLOR1  #ff6c11
+#define COLOR9  #ff6c11
+
+! Secondary
+#define COLOR2  #ff3864	
+#define COLOR10 #ff3864
+
+! Highlights
+#define COLOR3  #f6019d
+#define COLOR11 #f6019d
+#define COLOR4  #fd1d53
+#define COLOR12 #fd1d53
+#define COLOR5  #f9c80e
+#define COLOR13 #f9c80e
+
+! Tertiary
+#define COLOR0  #241734
+#define COLOR8  #241734
+#define COLOR6  #0d0221
+#define COLOR14 #0d0221
+#define COLOR7  #261447
+#define COLOR15 #261447

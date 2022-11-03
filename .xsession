@@ -16,7 +16,7 @@ i3 -C >> $log
 
 # load wallpaper
 echo loading wallpaper... >> $log
-feh --bg-fill $HOME/Pictures/wallpaper.png 2>> $log
+feh --bg-fill $HOME/Pictures/cyberpunk.png 2>> $log
 
 # start i3
 exec i3 2>> $log 

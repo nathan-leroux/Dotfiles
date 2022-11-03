@@ -1,37 +1,25 @@
 ! *****  blaquemagick  *****
 
-! Special
-#define FOREGROUND #c2c2b0
-#define BACKGROUND #1c1c1c
+! Primary
+#define Primary1  #5f8787
+#define Primary2  #5f8787
 
-! Black
-#define COLOR0  #1c1c1c
-#define COLOR8  #262626
+! Secondary
+#define Secondary1  #424242
+#define Secondary2  #424242
 
-! Red
-#define COLOR1  #5f8787
-#define COLOR9  #5f8787
+! Highlights
+#define Highlight1  #666666
+#define Highlight2  #666666
+#define Highlight3  #808080
+#define Highlight4  #808080
+#define Highlight5  #a8a8a8
+#define Highlight6  #a8a8a8
 
-! Green
-#define COLOR2  #424242
-#define COLOR10 #424242
-
-! Yellow
-#define COLOR3  #666666
-#define COLOR11 #666666
-
-! Blue
-#define COLOR4  #808080
-#define COLOR12 #808080
-
-! Magenta
-#define COLOR5  #a8a8a8
-#define COLOR13 #a8a8a8
-
-! Cyan
-#define COLOR6  #cccccc 
-#define COLOR14 #cccccc 
-
-! White
-#define COLOR7  #c2c2b0
-#define COLOR15 #c2c2b0
+! Tertiary
+#define Tertiary1  #1c1c1c
+#define Tertiary2  #262626
+#define Tertiary3  #cccccc 
+#define Tertiary4  #cccccc 
+#define Tertiary5  #c2c2b0
+#define Tertiary6  #c2c2b0

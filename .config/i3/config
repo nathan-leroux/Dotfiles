@@ -38,7 +38,7 @@ set $left h
 set $right l
 
 # Wallpaper
-exec_always feh --bg-fill ~/Pictures/wallpaper.png
+exec_always feh --bg-fill ~/Pictures/cyberpunk.jpg
 
 # Default font
 font pango:DejaVu Sans Mono 8
