@@ -7,7 +7,8 @@
 # Script Variables
 set $lights ~/Scripts/lights.sh
 set $volume /usr/bin/pulseaudio-ctl
-set $media /usr/bin/playerctl 
+set $media /usr/bin/playerctl
+set $restart ~/Scripts/restart.sh
 
 # Colour Variables
 set_from_resource $fg foreground
@@ -111,7 +112,7 @@ bindsym $mod+Shift+s exec gnome-control-center
 	bindsym $mod+Shift+c reload
 
 #	restart i3
-	bindsym $mod+Shift+r restart
+	bindsym $mod+Shift+r exec $restart
 
 #	shutdown
 	bindsym $mod+Escape exec "shutdown now"
