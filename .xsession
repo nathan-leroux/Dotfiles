@@ -14,6 +14,9 @@ i3 -C >> $log
 #echo polybar launched... >> $log
 #$HOME/.config/polybar/launch.sh 2>> $log &
 
+# start picom
+#$HOME/.config/picom/launch.sh &
+
 # load wallpaper
 echo loading wallpaper... >> $log
 feh --bg-fill $HOME/Pictures/cyberpunk.png 2>> $log

@@ -76,22 +76,18 @@ def read_config(path):
 	with open(path) as config_file:
 		return json.load(config_file)
 		
-def edit_config(config, new_vars, location):
-	assert isinstance(location, list)
+def edit_config(config, new_vars, file):
+	# recursively add 
 	assert isinstance(config, dict)
 
-	# target is where to update values
-	og = config.copy()
-
-	target = config
-	for key in location:
-		target = target[key]
-
-	# update
-	target = new_vars
+	if file == "syntax":
+		config["variables"].update(new_vars)
+	elif file == "theme":
+		config["variables"].update(new_vars)
+	else:
+		raise ValueError("invalid file type")
 
 	#return the whole json
-	assert og != config
 	return config
 
 
@@ -107,17 +103,22 @@ def update_config(path, vars, key):
 def dummy_run(new_vars):
 	theme = "/home/nath/Scripts/dummy-theme.json"
 	colors = "/home/nath/Scripts/dummy-color-scheme.json"
-	update_config(theme, new_vars, ["variables", "colors"])
-	update_config(colors, new_vars, ["variables"])
 
-	print(read_config(theme["variables"]))
-	print(read_config(colors))
+	# copy configs to dummy spots
+	sp.run(["cp", THEME_PATH, theme])
+	sp.run(["cp", SYNTAX_PATH, colors])
+
+	update_config(theme, new_vars, "theme")
+	update_config(colors, new_vars, "syntax")
+
+	print(read_config(theme)["variables"]["colors"])
+	print(read_config(colors)["variables"])
 
 if __name__ == '__main__':
 	# load and clean xresources
 	new_vars = load_xresources()
 
-	dummy_run(new_vars)
-	# update syntax an theme colors
-	#update_config(SYNTAX_PATH, new_vars)
-	#update_config(THEME_PATH, new_vars)
+	#dummy_run(new_vars)
+	#update syntax an theme colors
+	update_config(SYNTAX_PATH, new_vars, "syntax")
+	#update_config(THEME_PATH, new_vars, "theme")
