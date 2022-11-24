@@ -1,0 +1,8 @@
+<snippet>
+	<tabTrigger>doc</tabTrigger>
+	<scope>source.python</scope>
+	<content><![CDATA[
+Hello, ${1:this} is a ${2:snippet}.
+]]></content>
+	<description>Func/Class Docstring</description>
+</snippet>
