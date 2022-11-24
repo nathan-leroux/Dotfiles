@@ -3,38 +3,38 @@
 
 ! **********  Colours  **********
 
-#include "/home/nath/.xcolours/blaquemagick"
+#include "/home/nath/.xcolours/cyberpunk"
 
 ! **********  Program Settings *********
 
 ! Colors
-*foreground: FOREGROUND
-*background: BACKGROUND
-*color0: COLOR0
-*color1: COLOR1
-*color2: COLOR2
-*color3: COLOR3
-*color4: COLOR4
-*color5: COLOR5
-*color6: COLOR6
-*color7: COLOR7
-*color8: COLOR8
-*color9: COLOR9
-*color10: COLOR10
-*color11: COLOR11
-*color12: COLOR12
-*color13: COLOR13
-*color14: COLOR14
-*color15: COLOR15
+*foreground: Tertiary3
+*background: Tertiary1
+*color0: Tertiary1
+*color8: Tertiary2
+*color1: Primary1
+*color9: Primary2
+*color2: Secondary1
+*color10: Secondary2
+*color3: Highlight1
+*color11: Highlight2
+*color4: Highlight3
+*color12: Highlight4
+*color5: Highlight5
+*color13: Highlight6
+*color6: Tertiary3
+*color14: Tertiary4
+*color7: Tertiary5
+*color15: Tertiary6
 
 ! Font
 *font: xft:Tamsyn:style=Regular:pixelsize=16
 
 ! Terminal
 
-URxvt*cursorColor: COLOR7
-URxvt*highlightColor: COLOR13
-URxvt*borderColor: COLOR0
+URxvt*cursorColor: Primary1
+URxvt*highlightColor: Secondary1
+URxvt*borderColor: Tertiary1
 
 ! Cursor
 URxvt*cursorBlink: true

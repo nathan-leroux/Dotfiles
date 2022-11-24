@@ -7,7 +7,8 @@
 # Script Variables
 set $lights ~/Scripts/lights.sh
 set $volume /usr/bin/pulseaudio-ctl
-set $media /usr/bin/playerctl 
+set $media /usr/bin/playerctl
+set $restart ~/Scripts/restart.sh
 
 # Colour Variables
 set_from_resource $fg foreground
@@ -38,7 +39,7 @@ set $left h
 set $right l
 
 # Wallpaper
-exec_always feh --bg-fill ~/Pictures/wallpaper.png
+exec_always feh --bg-fill ~/Pictures/cyberpunk.jpg
 
 # Default font
 font pango:DejaVu Sans Mono 8
@@ -111,7 +112,7 @@ bindsym $mod+Shift+s exec gnome-control-center
 	bindsym $mod+Shift+c reload
 
 #	restart i3
-	bindsym $mod+Shift+r restart
+	bindsym $mod+Shift+r exec $restart
 
 #	shutdown
 	bindsym $mod+Escape exec "shutdown now"
@@ -168,9 +169,22 @@ bindsym $mod+Shift+s exec gnome-control-center
 	bindsym $mod+Shift+0 move container to workspace 10
 
 # Compositor, Notifications and Bar
-#exec_always --no-startup-id pkill picom; picom --no-use-damage
+set $polylog $HOME/.config/polylog.log
+set $picomlog $HOME/.config/picomlog.log
+
+# Compositor
+
+exec_always echo "picom launched..." > $picomlog
+exec_always --no-startup-id pkill picom; picom
+
 #exec_always --no-startup-id pkill dunst; dunst
-#exec_always --no-startup-id ~/.config/polybar/launch.sh
+#
+# Update Colour Scheme
+exec_always ~/Scripts/subl-colour.py
+
+# Launch Polybar
+exec_always echo "polybar launched..." > $polylog
+exec_always --no-startup-id ~/.config/polybar/launch.sh 2>> $polylog
 
 #################################################
 #		Default Config
