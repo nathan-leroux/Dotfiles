@@ -15,18 +15,20 @@
 	"drag_text": false,
 
 	"scroll_speed": 2.0,
-	"show_tab_close_buttons": false,
+	"show_tab_close_buttons": true,
 	"bold_folder_labels": true,
 	"hide_tab_scrolling_buttons": true,
 	"hide_new_tab_button": true,
 	"show_sidebar_button": true,
 
 	"hot_exit": "disabled",
+	"save_on_focus_lost": true,
 	"remember_workspace": false,
 	"remember_layout": true,
 	"show_full_path": false,
 	"show_project_first": true,
 	"vintage_start_in_command_mode": true,
 	"vintage_use_clipboard": true,
-	"ignored_packages": [],
+	"ignored_packages": [
+	],
 }
