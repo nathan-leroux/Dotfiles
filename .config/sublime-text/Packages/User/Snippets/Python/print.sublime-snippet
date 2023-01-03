@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.python</scope>
+	<tabTrigger>pr</tabTrigger>
+	<description>Print statement</description>
+	<content><![CDATA[
+print(${1:f}"${2:exp}")$0
+]]></content>
+</snippet>
