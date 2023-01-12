@@ -29,6 +29,4 @@
 	"show_project_first": true,
 	"vintage_start_in_command_mode": true,
 	"vintage_use_clipboard": true,
-	"ignored_packages": [
-	],
 }
