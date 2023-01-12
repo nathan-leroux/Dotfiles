@@ -10,6 +10,7 @@ alias stk='stk-simply'
 # config shortcut for dotfiles repo
 alias config='/usr/bin/git --git-dir=/home/nath/.cfg/ --work-tree=/home/nath'
 
+<<<<<<< HEAD
 #shortcut for snippets
 alias to_snips='cd /home/nath/.config/sublime-text/Packages/User/Snippets'
 
