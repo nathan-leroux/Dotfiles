@@ -38,7 +38,7 @@ URxvt*borderColor: Tertiary1
 
 ! Cursor
 URxvt*cursorBlink: true
-URxvt*cursorUnderline: true
+URxvt*cursorUnderline: false
 
 ! Pointer
 URxvt*pointerBlank: true

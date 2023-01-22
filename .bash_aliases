@@ -9,3 +9,6 @@ alias config='/usr/bin/git --git-dir=/home/nath/.cfg/ --work-tree=/home/nath'
 
 # pytest flags setup
 alias pytest='pytest -v --no-header --tb=short'
+
+# misc. shortcuts
+alias warp='source env/bin/activate'

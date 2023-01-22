@@ -1,4 +1,21 @@
 " Vim config file
+"     #####  Plugin Setup  #####
+set nocompatible
+filetype off
+
+" set runtime path to include vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim' "required
+Plugin 'scrooloose/Syntastic' "syntax highlighting
+Plugin 'valloric/youcompleteme' "completion engine
+Plugin 'scrooloose/nerdcommenter' "commenting functions
+Plugin 'vim-airline/vim-airline' "clean af menu bar
+Plugin 'honza/vim-snippets' "snippets library
+
+call vundle#end()
+filetype plugin indent on
 
 "     #####  Indentation Options  #####
 
