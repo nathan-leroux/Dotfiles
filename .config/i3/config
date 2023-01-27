@@ -166,6 +166,12 @@ bindsym $mod+Shift+s exec gnome-control-center
 	bindsym $mod+Shift+9 move container to workspace 9
 	bindsym $mod+Shift+0 move container to workspace 10
 
+#   dj mode (i need the mod key)
+    bindsym $mod+Shift+d mode "dj"
+    mode "dj" {
+        bindsym Escape mode "default"
+    }
+
 # Log locations
 set $polylog $HOME/.config/polylog.log
 set $picomlog $HOME/.config/picomlog.log
