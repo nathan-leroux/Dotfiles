@@ -83,7 +83,7 @@ set title
 "     #####  Folding Options  #####
 
 " fold based on indents
-set foldmethod=indent
+"set foldmethod=indent
 
 "     #####  Misc Options  #####
 
