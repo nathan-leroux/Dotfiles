@@ -117,7 +117,6 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 
-# enviroment vars
-#   Spotipy
-export SPOTIPY_CLIENT_ID=ad35ec52e9264d8893b87f091bc3a6d0
-export SPOTIPY_CLIENT_SECRET=e825416ba4104803a0d14a71c4b4007f
+# set default text editor as vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
