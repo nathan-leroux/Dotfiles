@@ -7,13 +7,14 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim' "required
-Plugin 'nathanaelkane/vim-indent-guides' "indent lines
-Plugin 'scrooloose/Syntastic' "syntax highlighting
-Plugin 'valloric/youcompleteme' "completion engine
-Plugin 'scrooloose/nerdcommenter' "commenting functions
-Plugin 'vim-airline/vim-airline' "clean af menu bar
-Plugin 'honza/vim-snippets' "snippets library
+Plugin 'VundleVim/Vundle.vim'           "required
+Plugin 'nathanaelkane/vim-indent-guides'"indent lines
+Plugin 'scrooloose/Syntastic'           "syntax highlighting
+Plugin 'valloric/youcompleteme'         "completion engine
+Plugin 'scrooloose/nerdcommenter'       "commenting functions
+Plugin 'vim-airline/vim-airline'        "clean af menu bar
+Plugin 'honza/vim-snippets'             "snippets library
+Plugin 'sirver/ultisnips'               "snippets engine
 
 call vundle#end()
 filetype plugin indent on
@@ -35,6 +36,12 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
 
+"     #####  Completion Options  #####
+
+" triggers to use snippets
+let g:UltiSnipsExpandTrigger="<space>"
+let g:UltiSnipsJumpForwardTrigger="<S-j>"
+let g:UltiSnipsJumpBackwardTrigger="<S-k>"
 
 "     #####  Search Options  #####
 
