@@ -8,6 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' "required
+Plugin 'nathanaelkane/vim-indent-guides' "indent lines
 Plugin 'scrooloose/Syntastic' "syntax highlighting
 Plugin 'valloric/youcompleteme' "completion engine
 Plugin 'scrooloose/nerdcommenter' "commenting functions
@@ -22,16 +23,18 @@ filetype plugin indent on
 " same indentation as previous lines, according to filetype
 set autoindent
 
-" make shifting consistantly 4 spaces
+" tabs to spaces
 set shiftround
+set tabstop=4
 set shiftwidth=4
-
-" expand tabs to spaces
 set expandtab
 
-" insert 'tabstop' spaces when tab is pressed
-set smarttab
-set tabstop=4
+" config for indent guides (vim-indent-guides)
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
+
 
 "     #####  Search Options  #####
 
