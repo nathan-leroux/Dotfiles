@@ -3,6 +3,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# clear alias
+alias cl='clear'
+
 # specifying stk-simply for stk
 alias stk='stk-simply'
 
