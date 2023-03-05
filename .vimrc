@@ -5,6 +5,8 @@
 "   case insensitive searching
 "   consider switch to gvim
 "   cleanup menu bar
+"   disable snippets on all filetypes apart from regular code
+"
 "
 " Vim config file
 "     #####  Plugin Setup  #####

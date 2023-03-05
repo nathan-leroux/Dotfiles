@@ -173,21 +173,18 @@ bindsym $mod+Shift+s exec gnome-control-center
     }
 
 # Log locations
-set $polylog $HOME/.config/polylog.log
-set $picomlog $HOME/.config/picomlog.log
+set $polylog $HOME/.config/polybar/debug.log
+set $picomlog $HOME/.config/picom/debug.log
 
 # Wallpaper
 exec_always feh --bg-fill ~/Pictures/cyberpunk.jpg
 
 # Compositor
 exec_always echo "picom launched..." > $picomlog
-exec_always --no-startup-id pkill picom; picom
+exec_always --no-startup-id pkill picom; picom >> $picomlog
 
 # Notifications
 #exec_always --no-startup-id pkill dunst; dunst
-
-# Update Colour Scheme
-exec_always ~/Scripts/subl-colour.py
 
 # Launch Polybar
 exec_always echo "polybar launched..." > $polylog
