@@ -43,8 +43,8 @@ set $right l
 font pango:DejaVu Sans Mono 8
 
 # Gap sizes
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 0
 
 # Program bindings
 bindsym $mod+Return exec urxvt
