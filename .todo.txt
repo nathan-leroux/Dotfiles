@@ -1,0 +1,60 @@
+##########################################
+#
+#       CODING TODOLIST
+# 
+##########################################
+
+# Coding Projects
+    Todolist
+        focus on project skills and combining new tools learnt
+            test driven developement
+            interface documenting (still in comments)
+            git branching for additional features
+    YT Austomation tools
+        Project for Jaydo
+        put on hold until concrete specs can be decided on
+    Talkbox
+        passion proj
+        potential monetisation
+    Portfolio Website
+        web front end skills
+        who knows, maybe get a pro job lol
+
+
+# Coding Studies
+    Data Structures and Algorithyms 
+        bread n butter stuff
+    Reverse Engineering
+        learning c++
+            essential for reverse eng
+    Databases
+
+
+# Coding Toolkit
+    documentation tool
+        useful for keeping interface information separate from code
+        and up to date.
+
+
+# Vim Config
+    suss out proper commenting commands
+        just one command needed for inverting
+    polish syntax highlighting
+        currently doing a bunch of weird shit that im not sure about, needs a polish
+    writeout on unfocus
+        not possible with term vim, however are alts
+            apparently you can run cmd and have output redirected to nearby term?
+    case insensitive searching
+    cleanup vim status bar
+
+
+# System Config
+    Pywal support
+        automation and uniform quality for sys colorschemes
+    Modularisation for themes
+        having i3, polybar, xcolors, etc changed from central spot
+    Rofi
+        replace dmenu with themed popup
+        included with dunst for notifications
+    i3-lock
+        get custom lock screen

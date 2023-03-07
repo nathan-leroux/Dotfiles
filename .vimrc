@@ -1,13 +1,3 @@
-" vimtime todo list
-"   commenting functions into vim motions
-"   install syntax highlighting
-"   writeout on unfocus
-"   case insensitive searching
-"   consider switch to gvim
-"   cleanup menu bar
-"   disable snippets on all filetypes apart from regular code
-"
-"
 " Vim config file
 "     #####  Plugin Setup  #####
 set nocompatible
@@ -20,7 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'           "required
 Plugin 'nathanaelkane/vim-indent-guides'"indent lines
 "Plugin 'thaerkh/vim-indentguides'
-Plugin 'scrooloose/Syntastic'           "syntax highlighting
+"Plugin 'scrooloose/Syntastic'           "syntax highlighting
 Plugin 'valloric/youcompleteme'         "completion engine
 Plugin 'scrooloose/nerdcommenter'       "commenting functions
 Plugin 'vim-airline/vim-airline'        "clean af menu bar
@@ -105,9 +95,9 @@ let g:syntastic_check_on_wq = 0
 
 "     #####  Completion Options  #####
 " triggers to use snippets
-let g:UltiSnipsExpandTrigger="<space>"
-let g:UltiSnipsJumpForwardTrigger="<S-j>"
-let g:UltiSnipsJumpBackwardTrigger="<S-k>"
+let g:UltiSnipsExpandTrigger="<leader><space>"
+let g:UltiSnipsJumpForwardTrigger="<leader><space>"
+let g:UltiSnipsJumpBackwardTrigger="<leader>k"
 
 
 
