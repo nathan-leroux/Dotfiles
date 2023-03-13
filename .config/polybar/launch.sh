@@ -4,6 +4,6 @@
 killall -q polybar
 
 # Launch bar
-polybar bar120 & disown
+polybar clean & disown
 
 

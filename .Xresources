@@ -3,7 +3,7 @@
 
 ! **********  Colours  **********
 
-#include "/home/nath/.xcolours/cyberpunk"
+#include "/home/nath/.xcolours/fern"
 
 ! **********  Program Settings *********
 
@@ -38,7 +38,7 @@ URxvt*borderColor: Tertiary1
 
 ! Cursor
 URxvt*cursorBlink: true
-URxvt*cursorUnderline: true
+URxvt*cursorUnderline: false
 
 ! Pointer
 URxvt*pointerBlank: true
