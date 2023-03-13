@@ -1,5 +1,5 @@
 {
-	"color_scheme": "dynamic.sublime-color-scheme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
 	"font_face": "Ubuntu Mono",
 	"font_size": 12,
@@ -29,4 +29,5 @@
 	"show_project_first": true,
 	"vintage_start_in_command_mode": true,
 	"vintage_use_clipboard": true,
+	"ignored_packages": []
 }
