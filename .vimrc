@@ -49,9 +49,14 @@ let g:NERDToggleCheckAllLines = 1
 
 
 
-"     #####  Save On Unfocus  #####
-" (doesn't currently work)
-:au FocusLost * silent! wa
+"     #####  Speedrun Code  #####
+"     man i wish i knew how to use vim properly
+"     run python
+autocmd FileType python map <buffer> <F1> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+"     run tests
+autocmd FileType python map <buffer> <F2> :w<CR>:vert ter pytest<CR>
+autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:vert ter pytest<CR>
 
 
 
@@ -127,6 +132,19 @@ syntax enable
 
 
 
+"     ######  Split Options  #####
+" split shortcuts
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" set correct split directions
+set splitbelow
+set splitright
+
+
+
 "     ######  UI Options  #####
 " show status bar
 " set laststatus=2
@@ -137,6 +155,7 @@ set ruler
 
 " show command completions as a menu
 set wildmenu
+
 
 " pick colourscheme
 " set colorscheme <scheme>

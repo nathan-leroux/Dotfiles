@@ -34,6 +34,9 @@
     documentation tool
         useful for keeping interface information separate from code
         and up to date.
+    enviroment management
+        requirements.txt is not coupled to the actual enviroment
+        figure out the upgrade
 
 
 # Vim Config
