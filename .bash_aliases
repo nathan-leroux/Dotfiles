@@ -21,5 +21,13 @@ alias config='/usr/bin/git --git-dir=/home/nath/.cfg/ --work-tree=/home/nath'
 # pytest flags setup
 alias pytest='python3 -m pytest -v --no-header --tb=short'
 
+# git shortcuts
+alias gs='git status'
+alias ga='git add'
+alias gr='git rm'
+alias gc='git commit'
+alias gpush='git push'
+alias gpull='git pull'
+
 # misc. shortcuts
 alias warp='source env/bin/activate'
