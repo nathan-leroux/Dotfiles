@@ -51,12 +51,26 @@ let g:NERDToggleCheckAllLines = 1
 
 "     #####  Speedrun Code  #####
 "     man i wish i knew how to use vim properly
-"     run python
-autocmd FileType python map <buffer> <F1> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F1> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+"     run code
+
+" C++ flags
+let $CXX = 'g++'
+let $CXXFLAGS = '-std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wsign-conversion'
+
+" Compile Code
+autocmd FileType cpp map <buffer> <leader>1 :silent !clear<CR> :w<CR>:make %< <CR>
+autocmd FileType cpp imap <buffer> <leader>1 <esc>:silent !clear<CR>:w<CR>:make %< <CR>
+
+" Run Code
+autocmd FileType python map <buffer> <leader>2 :w<CR>:silent !clear<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <leader>2 <esc>:w<CR>:silent !clear<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+autocmd FileType cpp map <buffer> <leader>2 :silent !clear<CR>:!./%< <CR>
+autocmd FileType cpp imap <buffer> <leader>2 <esc>:silent !clear<CR>:!./%< <CR>
+
 "     run tests
-autocmd FileType python map <buffer> <F2> :w<CR>:vert ter pytest<CR>
-autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:vert ter pytest<CR>
+autocmd FileType python map <buffer> <leader>3 :w<CR>:silent !clear<CR>::exec '!python3 -m pytest -v --no-header --tb=short'<CR>
+autocmd FileType python imap <buffer> <leader>3 <esc>:w<CR>:silent !clear<CR>:exec '!python3  -m pytest -v --no-header --tb=short<CR>
 
 
 
