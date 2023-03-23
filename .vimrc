@@ -58,8 +58,8 @@ let $CXX = 'g++'
 let $CXXFLAGS = '-std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wsign-conversion'
 
 " Compile Code
-autocmd FileType cpp map <buffer> <leader>1 :silent !clear<CR> :w<CR>:make %< <CR>
-autocmd FileType cpp imap <buffer> <leader>1 <esc>:silent !clear<CR>:w<CR>:make %< <CR>
+autocmd FileType cpp map <buffer> <leader>1 :silent !clear<CR> :w<CR>:make! %< <CR>
+autocmd FileType cpp imap <buffer> <leader>1 <esc>:silent !clear<CR>:w<CR>:make! %< <CR>
 
 " Run Code
 autocmd FileType python map <buffer> <leader>2 :w<CR>:silent !clear<CR>:exec '!python3' shellescape(@%, 1)<CR>
