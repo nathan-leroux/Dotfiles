@@ -31,3 +31,4 @@ alias gpull='git pull'
 
 # misc. shortcuts
 alias warp='source env/bin/activate'
+alias vpn='sudo openvpn --config ~/.vpn/client.conf'

@@ -177,7 +177,7 @@ set $polylog $HOME/.config/polybar/debug.log
 set $picomlog $HOME/.config/picom/debug.log
 
 # Wallpaper
-exec_always feh --bg-fill ~/Pictures/fern.png
+exec_always feh --bg-fill ~/Pictures/cyberpunk.jpg
 
 # Compositor
 exec_always echo "picom launched..." > $picomlog
