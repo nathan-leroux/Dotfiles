@@ -5,10 +5,10 @@
 #################################################
 
 # Script Variables
-set $lights ~/Scripts/lights.sh
+set $lights $SCRIPTS/lights
 set $volume /usr/bin/pulseaudio-ctl
 set $media /usr/bin/playerctl
-set $restart ~/Scripts/restart.sh
+set $restart $SCRIPTS/restart
 
 # Colour Variables
 set_from_resource $fg foreground
@@ -47,9 +47,10 @@ gaps inner 4
 gaps outer 0
 
 # Program bindings
-bindsym $mod+Return exec urxvt
-bindsym $mod+bracketright exec firefox
-bindsym $mod+bracketleft exec subl
+bindsym $mod+Return exec $TERMINAL
+bindsym $mod+bracketright exec $BROWSER
+
+#bindsym $mod+bracketleft exec subl
 bindsym $mod+Shift+s exec gnome-control-center
 
 # i3 styling

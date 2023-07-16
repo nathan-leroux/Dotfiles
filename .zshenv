@@ -1,1 +1,1 @@
-ZDOTIR="$CONFIG/zsh"
+ZDOTDIR="$CONFIG/zsh"

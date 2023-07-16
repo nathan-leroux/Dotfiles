@@ -54,10 +54,23 @@
 # System Config
     Pywal support
         automation and uniform quality for sys colorschemes
-    Modularisation for themes
-        having i3, polybar, xcolors, etc changed from central spot
     Rofi
         replace dmenu with themed popup
         included with dunst for notifications
     i3-lock
         get custom lock screen
+    ranger
+        terminal based file explorer
+
+# terminal refactor notes
+    computer boots
+    .xsession is executed
+    i3 is launched
+    terminal is opened with enter
+    terminal/init is called
+    additional files are loaded
+
+new terminal notes
+    rangle fonts into correct folder
+    create alacritty config
+    add to git
