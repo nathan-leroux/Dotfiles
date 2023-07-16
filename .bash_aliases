@@ -6,6 +6,9 @@ alias l='ls -CF'
 # clear alias
 alias cl='clear'
 
+# duplicate terminal
+alias dup='pwd | urxvt & disown'
+
 # Custom C++ compile flags
 alias mycpp='g++ -std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wsign-conversion'
 

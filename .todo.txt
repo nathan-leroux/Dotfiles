@@ -61,3 +61,9 @@
         included with dunst for notifications
     i3-lock
         get custom lock screen
+    maintanence
+        reshuffle the config so its under the .config folder as much as possible
+        separate the aliases/secrets from bashrc into a seperate file so that
+        zsh and bash can use them equally
+        set term emulator as enviroment variable so that i3 config can be modular
+        write little scritp that pulls config from repo on startup
