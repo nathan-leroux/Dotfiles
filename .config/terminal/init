@@ -1,0 +1,16 @@
+# Alias definitions.
+# import bash aliases from ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Secret definitions.
+# export secret definitions from ~/.bash_secrets
+# (should go without saying but .bash_secrets shouldnt be in git...)
+if [ -f ~/.bash_secrets ]; then
+    . ~/.bash_secrets
+fi
+
+# set default text editor as vim
+export VISUAL=vim
+export EDITOR="$VISUAL"

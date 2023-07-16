@@ -1,0 +1,1 @@
+ZDOTIR="$CONFIG/zsh"
