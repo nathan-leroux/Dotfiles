@@ -17,6 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     zsh-autosuggestions
+    autoswitch_virtualenv
     zsh-syntax-highlighting
 )
 
