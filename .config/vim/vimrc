@@ -5,7 +5,7 @@ filetype plugin on
 
 " set runtime path to include vundle
 set rtp+=$CONFIG/vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#begin('$CONFIG/vim/bundle')
 
 Plugin 'VundleVim/Vundle.vim'           "required
 Plugin 'nathanaelkane/vim-indent-guides'"indent lines
