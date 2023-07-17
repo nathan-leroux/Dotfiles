@@ -19,7 +19,7 @@ alias mycc='gcc -Werror -Wall -pedantic -std=c11'
 alias stk='stk-simply'
 
 # config shortcut for dotfiles repo
-alias config='/usr/bin/git --git-dir=/home/nath/.cfg/ --work-tree=/home/nath'
+alias config='/usr/bin/git --git-dir=$CONFIG/.cfg/ --work-tree=/home/nath'
 
 # pytest flags setup
 alias pytest='python3 -m pytest -v --no-header --tb=short'

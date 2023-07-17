@@ -1,1 +1,1 @@
-ZDOTDIR="$CONFIG/zsh"
+export ZDOTDIR="$CONFIG/zsh"

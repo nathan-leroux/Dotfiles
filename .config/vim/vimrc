@@ -4,7 +4,7 @@ set nocompatible
 filetype plugin on
 
 " set runtime path to include vundle
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$CONFIG/vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'           "required
@@ -198,4 +198,3 @@ set confirm
 
 " spell check
 " set spell
-
