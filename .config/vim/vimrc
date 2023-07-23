@@ -21,7 +21,6 @@ call vundle#end()
 filetype plugin indent on
 
 
-
 "     #####  Comment Options  #####
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
@@ -55,7 +54,7 @@ let g:NERDToggleCheckAllLines = 1
 
 " C++ flags
 let $CXX = 'g++'
-let $CXXFLAGS = '-std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wsign-conversion'
+let $CXXFLAGS = '-std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion'
 
 " Compile Code
 autocmd FileType cpp map <buffer> <leader>1 :silent !clear<CR> :w<CR>:make! %< <CR>
@@ -84,8 +83,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=7
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=8
 
 " config for indent guides (vim-indent-guides)
 let g:indent_guides_enable_on_vim_startup = 1
@@ -110,6 +107,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"     #####  Color Options  #####
+hi IndentGuidesOdd ctermbg=Blue
+hi IndentGuidesEven ctermbg=Grey
+
+hi Visual ctermbg=LightRed ctermfg=Black
+
+hi SignColumn ctermbg=Black
+hi SyntasticErrorSign ctermbg=Black ctermfg=Magenta
+hi SyntasticWarningSign ctermbg=Black ctermfg=Cyan
 
 
 "     #####  Completion Options  #####
@@ -161,15 +167,17 @@ set splitright
 
 "     ######  UI Options  #####
 " show status bar
-" set laststatus=2
+set laststatus=2
 
 " show cursor position and line
 set ruler
 " set cursorline
 
+" show signcolumn
+set signcolumn=yes
+
 " show command completions as a menu
 set wildmenu
-
 
 " pick colourscheme
 " set colorscheme <scheme>

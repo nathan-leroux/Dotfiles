@@ -1,0 +1,12 @@
+Config for GRUB bootloader
+
+if the image needs replacing
+must be 1920x1080 JPEG
+(dunno why lol)
+
+can use image-magick:
+convert-im6 <target> -resize 1920x1080 <result>.jpg
+
+Steps to install:
+sudo cp grub /etc/default/grub
+sudo update-grub

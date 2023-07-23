@@ -18,6 +18,7 @@ normal = { family = "UbuntuMono Nerd Font", style = "Regular" }
 foreground = "#ffffff"
 # background = "#000000"
 
+
 [bell]
 animation = "EaseOutSine"
 duration = 3

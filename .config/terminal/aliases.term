@@ -10,7 +10,7 @@ alias cl='clear'
 alias dup='pwd | urxvt & disown'
 
 # Custom C++ compile flags
-alias mycpp='g++ -std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wsign-conversion'
+alias mycpp='g++ -ggdb -std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion'
 
 # Custom CC compile flags
 alias mycc='gcc -Werror -Wall -pedantic -std=c11'
