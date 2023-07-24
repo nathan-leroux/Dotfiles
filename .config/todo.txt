@@ -49,6 +49,7 @@
             apparently you can run cmd and have output redirected to nearby term?
     case insensitive searching
     cleanup vim status bar
+    error highlighting is still obtrusive
 
 
 # System Config
@@ -61,10 +62,10 @@
         get custom lock screen
     ranger
         terminal based file explorer
+    configure zle (zsh line editor)
+        vi by default
+        foreward-char widget for auto suggestions
 
-# sunday cleanups todo
-    grub config
-    take advantage of terminal commands
-    disk and OS cleanup
-    compilier flags as an env variable
+
+
 

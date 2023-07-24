@@ -54,7 +54,7 @@ let g:NERDToggleCheckAllLines = 1
 
 " C++ flags
 let $CXX = 'g++'
-let $CXXFLAGS = '-std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion'
+let $CXXFLAGS = '-std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion -Wshadow'
 
 " Compile Code
 autocmd FileType cpp map <buffer> <leader>1 :silent !clear<CR> :w<CR>:make! %< <CR>
