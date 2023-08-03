@@ -27,6 +27,7 @@
     Reverse Engineering
         learning c++
             essential for reverse eng
+        www.guidedhacking.com
     Databases
 
 
@@ -42,14 +43,14 @@
 # Vim Config
     suss out proper commenting commands
         just one command needed for inverting
-    polish syntax highlighting
-        currently doing a bunch of weird shit that im not sure about, needs a polish
-    writeout on unfocus
-        not possible with term vim, however are alts
-            apparently you can run cmd and have output redirected to nearby term?
     case insensitive searching
     cleanup vim status bar
     error highlighting is still obtrusive
+    python linter broke
+    stop preview bars popping up
+    fuck it, should i just move to neovim? BURN IT ALL
+    really read ycm help and config that bitch
+
 
 
 # System Config
@@ -65,6 +66,7 @@
     configure zle (zsh line editor)
         vi by default
         foreward-char widget for auto suggestions
+    add copy paste support for alacritty
 
 
 

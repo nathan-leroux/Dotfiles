@@ -10,8 +10,8 @@ call vundle#begin('$CONFIG/vim/bundle')
 Plugin 'VundleVim/Vundle.vim'           "required
 Plugin 'nathanaelkane/vim-indent-guides'"indent lines
 "Plugin 'thaerkh/vim-indentguides'
-"Plugin 'scrooloose/Syntastic'           "syntax highlighting
-Plugin 'valloric/youcompleteme'         "completion engine
+Plugin 'scrooloose/Syntastic'           "syntax highlighting
+Plugin 'ycm-core/YouCompleteMe'         "completmon engmne
 Plugin 'scrooloose/nerdcommenter'       "commenting functions
 Plugin 'vim-airline/vim-airline'        "clean af menu bar
 Plugin 'honza/vim-snippets'             "snippets library
@@ -118,12 +118,20 @@ hi SyntasticErrorSign ctermbg=Black ctermfg=Magenta
 hi SyntasticWarningSign ctermbg=Black ctermfg=Cyan
 
 
-"     #####  Completion Options  #####
+"     #####  YouCompleteMe Options  #####
 " triggers to use snippets
 let g:UltiSnipsExpandTrigger="<leader><space>"
 let g:UltiSnipsJumpForwardTrigger="<leader><space>"
 let g:UltiSnipsJumpBackwardTrigger="<leader>k"
 
+" Close preview window after completion
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+let g:ycm_always_populate_location_list = 1
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_echo_current_diagnostic = 1
 
 
 "     #####  Search Options  #####
