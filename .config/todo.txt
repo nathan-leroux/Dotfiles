@@ -41,15 +41,25 @@
 
 
 # Vim Config
-    suss out proper commenting commands
-        just one command needed for inverting
-    case insensitive searching
-    cleanup vim status bar
-    error highlighting is still obtrusive
-    python linter broke
-    stop preview bars popping up
-    fuck it, should i just move to neovim? BURN IT ALL
-    really read ycm help and config that bitch
+    BURN IT ALL
+        higher contrast color scheme
+        keybinds
+            leader-space, snippet complete
+            leader-space, snippet step
+            tab, snippet completion
+            ctrl-h/j/k/l, split navigation
+            goto def?
+            make/run
+            comment toggle
+        settings
+            tabs as spaces
+            4 space indents
+            top and bottom buffer scrolling
+            relative numbers
+            side numbers
+            split down/right
+            highlight searches
+            wrap lines
 
 
 
