@@ -38,6 +38,6 @@ hide_when_typing = true
 
 [keyboard]
 bindings = [
-        {key="Space", mods="Shift", mode="AppKeypad", action="ToggleViMode"},
+        {key="F12", mods="Shift", mode="AppKeypad", action="ToggleViMode"},
 ]
 

@@ -41,26 +41,9 @@
 
 
 # Vim Config
-    BURN IT ALL
-        higher contrast color scheme
-        keybinds
-            leader-space, snippet complete
-            leader-space, snippet step
-            tab, snippet completion
-            ctrl-h/j/k/l, split navigation
-            goto def?
-            make/run
-            comment toggle
-        settings
-            tabs as spaces
-            4 space indents
-            top and bottom buffer scrolling
-            relative numbers
-            side numbers
-            split down/right
-            highlight searches
-            wrap lines
-
+    add cmp support for c++
+    add cmp keyword completion for python
+        read config, anything stand out?
 
 
 # System Config
@@ -77,6 +60,7 @@
         vi by default
         foreward-char widget for auto suggestions
     add copy paste support for alacritty
+    add xdg directories
 
 
 
