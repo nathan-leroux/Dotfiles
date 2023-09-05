@@ -61,6 +61,17 @@
         foreward-char widget for auto suggestions
     add copy paste support for alacritty
     add xdg directories
+    tmux
+        fix cli prompt
+        vimux
+            install and configure from within vim (for another day)
+
+                
+
+
+
+
+
 
 
 

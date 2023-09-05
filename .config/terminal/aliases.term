@@ -6,9 +6,6 @@ alias l='ls -CF'
 # clear alias
 alias cl='clear'
 
-# duplicate terminal
-alias dup='pwd | urxvt & disown'
-
 # Custom C++ compile flags
 alias mycpp='g++ -ggdb -std=c++17 -pedantic-errors -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion -Wshadow'
 
@@ -24,12 +21,12 @@ alias config='/usr/bin/git --git-dir=$CONFIG/.cfg/ --work-tree=/home/nath'
 # pytest flags setup
 alias pytest='python3 -m pytest -v --no-header --tb=short'
 
-
 # git shortcuts
 alias gs='git status'
 alias ga='git add'
 alias gr='git rm'
 alias gc='git commit'
+alias gb='git branch'
 alias gpush='git push'
 alias gpull='git pull'
 
@@ -38,3 +35,4 @@ alias warp='source env/bin/activate'
 alias vpn='sudo openvpn --config ~/.vpn/client.conf'
 alias vim='nvim'
 alias ls='lsd'
+alias tmux='tmux -f $CONFIG/tmux/tmux.conf'
