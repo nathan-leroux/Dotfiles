@@ -14,6 +14,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
+
 plugins=(
     git
     zsh-autosuggestions
@@ -22,6 +23,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# zsh settings
+unsetopt AUTO_CD
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
