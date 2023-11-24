@@ -1,4 +1,6 @@
 break up current init into modular using primeagen
+    next is lsp setup
 consolidate new shit learnt
-figure out how to use telescope
+figure out how to use treesitter
+switch caps and control ffs
 

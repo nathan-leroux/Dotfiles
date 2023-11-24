@@ -1,11 +1,4 @@
 require("nenene")
-print("hello from big boi lua")
-
--- leader key
-vim.g.mapleader = '\\'
-vim.g.maplocalleader = '\\'
-
-
 
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
@@ -13,7 +6,6 @@ vim.g.maplocalleader = '\\'
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
-  -- NOTE: First, some plugins that don't require any configuration
 
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -22,8 +14,7 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-  -- NOTE: This is where your plugins related to LSP can be installed.
-  --  The configuration is done below. Search for lspconfig to find it below.
+
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -41,6 +32,7 @@ require('lazy').setup({
     },
   },
 
+
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
@@ -57,13 +49,18 @@ require('lazy').setup({
     },
   },
 
-  -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+
   {
-    -- Adds git related signs to the gutter, as well as utilities for managing changes
+  -- Useful plugin to show you pending keybinds.
+    'folke/which-key.nvim', opts = {}
+  },
+
+
+  {
+    -- Adds git related signs to the gutter
+    -- See `:help gitsigns.txt`
     'lewis6991/gitsigns.nvim',
     opts = {
-      -- See `:help gitsigns.txt`
       signs = {
         add = { text = '+' },
         change = { text = '~' },
@@ -71,13 +68,9 @@ require('lazy').setup({
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
       },
-      on_attach = function(bufnr)
-        vim.keymap.set('n', '<leader>gp', require('gitsigns').prev_hunk, { buffer = bufnr, desc = '[G]o to [P]revious Hunk' })
-        vim.keymap.set('n', '<leader>gn', require('gitsigns').next_hunk, { buffer = bufnr, desc = '[G]o to [N]ext Hunk' })
-        vim.keymap.set('n', '<leader>ph', require('gitsigns').preview_hunk, { buffer = bufnr, desc = '[P]review [H]unk' })
-      end,
     },
   },
+
 
   {
     -- Colortheme
@@ -88,10 +81,11 @@ require('lazy').setup({
     end,
   },
 
+
   {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
+    -- statusline
     -- See `:help lualine.txt`
+    'nvim-lualine/lualine.nvim',
     opts = {
       options = {
         icons_enabled = false,
@@ -102,25 +96,33 @@ require('lazy').setup({
     },
   },
 
+
   {
     -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
+    'lukas-reineke/indent-blankline.nvim',
     opts = {
       char = '┊',
       show_trailing_blankline_indent = false,
     },
   },
 
-  -- comment toggling
+
   {
+    -- comment toggling
+    -- see :help comment-nvim
     'numToStr/Comment.nvim',
     opts = {}
   },
 
+
+  {
   -- Fuzzy Finder (files, lsp, etc)
-  { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+  -- see :help telescope.nvim
+        'nvim-telescope/telescope.nvim',
+        branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+  },
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'make',
@@ -128,6 +130,7 @@ require('lazy').setup({
       return vim.fn.executable 'make' == 1
     end,
   },
+
 
   {
     -- Highlight, edit, and navigate code
@@ -138,163 +141,8 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
+
 }, {})
-
-
---  #####  OPTIONS  #####
-
-
--- indentation options
-vim.o.autoindent = true
-vim.o.tabstop = 4
-vim.o.shiftround = true
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-
--- search options
-vim.o.hlsearch = true
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
--- text render options
-vim.o.encoding = "utf-8"
-vim.o.wrap = true
-vim.o.linebreak = true
-vim.o.scrolloff = 5
-vim.o.sidescrolloff = 5
-vim.o.breakindent = true
-
--- split options
-vim.o.splitbelow = true
-vim.o.splitright = true
-
--- user interface options
-vim.o.ruler = true
-vim.o.signcolumn = 'yes'
-vim.o.number = true
-vim.o.relativenumber = true
-
--- misc. options
-vim.o.mouse = 'a'
-vim.o.clipboard = 'unnamedplus'
-vim.o.undofile = true
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
-vim.o.completeopt = 'menuone,noselect'
-vim.o.termguicolors = true
-
-
---  #####  KEYBINDS  #####
-
-
--- ( <mode>, <keybind>, <action>, <opts> ) See `:help vim.keymap.set()`
-
--- space does nothing in normal/visual
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- vim splits
-vim.keymap.set({'n','i','t'}, '<C-j>', '<C-w>j')
-vim.keymap.set({'n','i','t'}, '<C-k>', '<C-w>k')
-vim.keymap.set({'n','i','t'}, '<C-h>', '<C-w>h')
-vim.keymap.set({'n','i','t'}, '<C-l>', '<C-w>l')
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- Diagnostic keymaps
-vim.keymap.set('n', '<leader>ek', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', '<leader>ej', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
--- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>eo', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
--- Highlight on yank
--- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
-})
-
-require('telescope').setup {
-  defaults = {
-    mappings = {
-      i = {
-        ['<C-u>'] = false,
-        ['<C-d>'] = false,
-      },
-    },
-  },
-}
-
-
--- [[ Configure Treesitter ]]
--- See `:help nvim-treesitter`
-require('nvim-treesitter.configs').setup {
-  -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
-
-  -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-  auto_install = false,
-
-  highlight = { enable = true },
-  indent = { enable = true },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = '<c-space>',
-      node_incremental = '<c-space>',
-      scope_incremental = '<c-s>',
-      node_decremental = '<M-space>',
-    },
-  },
-  textobjects = {
-    select = {
-      enable = true,
-      lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-      keymaps = {
-        -- You can use the capture groups defined in textobjects.scm
-        ['aa'] = '@parameter.outer',
-        ['ia'] = '@parameter.inner',
-        ['af'] = '@function.outer',
-        ['if'] = '@function.inner',
-        ['ac'] = '@class.outer',
-        ['ic'] = '@class.inner',
-      },
-    },
-    move = {
-      enable = true,
-      set_jumps = true, -- whether to set jumps in the jumplist
-      goto_next_start = {
-        [']m'] = '@function.outer',
-        [']]'] = '@class.outer',
-      },
-      goto_next_end = {
-        [']M'] = '@function.outer',
-        [']['] = '@class.outer',
-      },
-      goto_previous_start = {
-        ['[m'] = '@function.outer',
-        ['[['] = '@class.outer',
-      },
-      goto_previous_end = {
-        ['[M'] = '@function.outer',
-        ['[]'] = '@class.outer',
-      },
-    },
-    swap = {
-      enable = true,
-      swap_next = {
-        ['<leader>a'] = '@parameter.inner',
-      },
-      swap_previous = {
-        ['<leader>A'] = '@parameter.inner',
-      },
-    },
-  },
-}
 
 
 -- [[ Configure LSP ]]
