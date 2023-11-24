@@ -1,0 +1,4 @@
+break up current init into modular using primeagen
+consolidate new shit learnt
+figure out how to use telescope
+
