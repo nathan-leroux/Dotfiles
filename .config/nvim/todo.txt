@@ -1,6 +1,9 @@
 break up current init into modular using primeagen
     next is lsp setup
+        double check it works for python
 consolidate new shit learnt
 figure out how to use treesitter
 switch caps and control ffs
+set font size as global var ffs
+merge new branch with config main
 
