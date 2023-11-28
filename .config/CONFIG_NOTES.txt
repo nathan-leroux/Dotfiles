@@ -1,0 +1,19 @@
+#
+# notes on settings not able to be stored in confg
+#
+
+# switch CAPS and CTRL
+vim /etc/default/keyboard
+XKBOPTIONS="ctrl:swapcaps"
+
+sudo dpkg-reconfigure keyboard-configuration
+
+
+# getting pyright to work in nvim
+pyright relies on a node version able to use worker threads
+the default apt install (v10.19) cannot
+get newer version from NodeSource
+
+# installing with :Mason
+relies on npm (Node Package Manager)
+see getting pyright to work

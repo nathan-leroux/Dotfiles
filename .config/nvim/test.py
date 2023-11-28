@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def print_line(num):
-    for x in range:
+    for x in range(num):
         print(x)
 
 def main(num):
