@@ -1,8 +1,17 @@
 break up current init into modular using primeagen
     next is lsp setup
         double check it works for python
-consolidate new shit learnt
-figure out how to use treesitter
+        it dont, no language server
+        pyright is installed
+        lua and c work out of the box, what is differant with pyright?
+            check lsp.lua
+        does pyright work within venv
+            nah, spits an error tho
+        try reinstalling pyright?
+            commit first before u fuck everything again
+
+     figure out how to use treesitter
+    maybe aatish's magic keybind
 switch caps and control ffs
 set font size as global var ffs
 merge new branch with config main
