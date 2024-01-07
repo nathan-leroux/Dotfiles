@@ -14,6 +14,9 @@ pyright relies on a node version able to use worker threads
 the default apt install (v10.19) cannot
 get newer version from NodeSource
 
+# getting telescope string finding to work ("\fb")
+requires "ripgrep" installed on system (apt)
+
 # installing with :Mason
 relies on npm (Node Package Manager)
 see getting pyright to work

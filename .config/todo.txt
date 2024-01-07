@@ -27,6 +27,11 @@ Gronkmail
     Portfolio Website
         web front end skills
         who knows, maybe get a pro job lol
+    Time Manager
+        does pomodoros
+        logs how many per day
+        keeps stats
+        used for project time estimations
 
 
 # Coding Studies
@@ -69,6 +74,14 @@ Gronkmail
         foreward-char widget for auto suggestions
     add copy paste support for alacritty
     add xdg directories
+    tmux
+        fix cli prompt
+        customization (sync shit up with vim)
+        config
+            readjusting panes
+            closing panes
+        vimux
+            install and configure from within vim (for another day)
 
                 
 
