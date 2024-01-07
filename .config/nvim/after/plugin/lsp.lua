@@ -63,7 +63,7 @@ end
 
 -- my default lsp servers
 -- hint: extras can be installed from :Mason
-local servers = { "clangd", "pyright", "lua_ls", "taplo", "jsonls" }
+local servers = { "clangd", "pyright", "lua_ls", "taplo", "jsonls", "bashls"}
 
 -- Setup neovim lua configuration
 require('neodev').setup()

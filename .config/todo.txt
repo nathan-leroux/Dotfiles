@@ -4,6 +4,14 @@
 # 
 ##########################################
 
+
+## SHORTLIST (immediate projects, max of three so pick wisely)
+Djen
+    bug fix and package
+Gronkmail
+    db integration
+    gui
+
 # Coding Projects
     Todolist
         focus on project skills and combining new tools learnt
@@ -41,9 +49,9 @@
 
 
 # Vim Config
-    add cmp support for c++
-    add cmp keyword completion for python
-        read config, anything stand out?
+    doom-one colorscheme
+    snippet rework
+
 
 
 # System Config
@@ -61,10 +69,6 @@
         foreward-char widget for auto suggestions
     add copy paste support for alacritty
     add xdg directories
-    tmux
-        fix cli prompt
-        vimux
-            install and configure from within vim (for another day)
 
                 
 
