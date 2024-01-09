@@ -1,3 +1,0 @@
-break up current init into modular using primeagen
-set font size as global var ffs
-merge new branch with config main
